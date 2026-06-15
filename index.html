@@ -3,480 +3,86 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NSIT UBIUM LOCAL GOVERNMENT BURSARY 2026</title>
+<title>Quick Question</title>
+
 <style>
-:root{--green:#008751;--orange:#ff8c00;--light:#f5fff8;}
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{font-family:Arial,sans-serif;line-height:1.6;color:#222;background:#fff}
-
-nav{position:fixed;top:0;width:100%;background:var(--green);padding:15px 5%;display:justify-content:space-between;;align-items:center;z-index:1000}
-nav a{color:#fff;text-decoration:none;margin-left:15px}
-.logo-link{display:flex;gap:10px;text-decoration:none}
-.logo-box{width:55px;height:55px;border-radius:50%;overflow:hidden;background:#fff}
-.logo-box img{width:100%;height:100%;object-fit:cover}
-
-.hero{
-margin-top:0;
-background:
-linear-gradient(rgba(0,135,81,.80),rgba(0,135,81,.80)),
-url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhaYjdvY1lU5tDOt5iDnijmN8Mf8Gc2Sw6G2f4nLPPy8b7RdyAOMWKsYQOGVd7PtWpkl-E7nkShODNnr3SJCHrbX-7b-ZXtwHh0TIUYBLFVIdvBl3w9m6A_CYmeMTiB-t_1CNVLnLc6ertigfc2MkqIqbcfLeGYLkaZLPoliu8-wIHemaNxJIJIfg7JCU3l/s1254/ChatGPT%20Image%20Jun%2013,%202026,%2009_46_41%20AM.png');
-background-size:cover;
-background-position:center;
-background-repeat:no-repeat;
-color:#fff;
-padding:60px 5%;
-min-height:70vh;
-display:flex;
-align-items:center;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-.hero-grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:40px;
-align-items:center;
-width:100%;
+body{
+    background:#000;
+    color:#fff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    text-align:center;
 }
 
-.hero h3{
-font-size:20px;
-margin-bottom:10px;
-font-weight:600;
+.container{
+    width:90%;
+    max-width:400px;
 }
 
-.hero-title{
-font-size:52px;
-font-weight:800;
-line-height:1.1;
-margin-bottom:15px;
+.logo{
+    font-size:28px;
+    font-weight:bold;
+    margin-bottom:20px;
 }
 
-.hero p{
-font-size:18px;
-max-width:550px;
-}
-
-.hero img{
-width:100%;
-max-width:380px;
-display:block;
-margin:auto;
-border-radius:20px;
-border:5px solid #fff;
-box-shadow:0 10px 25px rgba(0,0,0,.25);
-}
-
-.section{padding:80px 5%}
-.section-title{text-align:center;font-size:36px;margin-bottom:40px;color:var(--green)}
-
-.btn{
-display:inline-block;background:var(--orange);color:#fff;
-padding:15px 30px;border-radius:50px;text-decoration:none;font-weight:bold
-}
-
-.stats{background:var(--green);color:#fff}
-.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
-.stat-item{text-align:center;background:rgba(255,255,255,.1);padding:30px;border-radius:15px}
-.counter{font-size:42px;font-weight:bold}
-
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:25px}
-.achievement-card{
-background:#fff;border-radius:15px;overflow:hidden;
-box-shadow:0 5px 20px rgba(0,0,0,.1)
-}
-.achievement-image{width:100%;height:220px;object-fit:cover}
-.achievement-content{padding:20px}
-
-.gallery-slider{
-position:relative;
-overflow:hidden;
-border-radius:15px;
-max-width:1200px;
-margin:auto;
-}
-
-.gallery-container{
-display:flex;
-transition:transform .8s ease;
-}
-
-.gallery-slide{
-min-width:100%;
-}
-
-.gallery-slide img{
-width:100%;
-height:450px;
-object-fit:cover;
-display:block;
-}
-
-.gallery-controls{
-display:flex;
-justify-content:center;
-gap:10px;
-margin-top:15px;
-}
-
-.gallery-dot{
-width:12px;
-height:12px;
-border-radius:50%;
-background:#ccc;
-cursor:pointer;
-transition:.3s;
-}
-
-.gallery-dot.active{
-background:var(--green);
-}
-
-@media(max-width:768px){
-
-.gallery-slide img{
-height:220px;
-}
-
-}
-
-.testimonials{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
-.testimonial{padding:25px;border-radius:15px;box-shadow:0 5px 20px rgba(0,0,0,.08)}
-
-.cta{text-align:center;background:var(--green);color:#fff}
-
-footer{background:#111;color:#fff;text-align:center;padding:30px}
-
-
-nav{
-padding:10px 3%;
-flex-direction:column;
-gap:10px;
-}
-
-nav{
-position:fixed;
-top:0;
-width:100%;
-background:var(--green);
-padding:15px 5%;
-display:flex;
-justify-content:center;
-align-items:center;
-z-index:1000;
-}
-
-.logo-link{
-display:flex;
-gap:10px;
-justify-content:center;
-align-items:center;
-}
-
-.logo-box{
-width:55px;
-height:55px;
-border-radius:50%;
-overflow:hidden;
-background:#fff;
-}
-
-.logo-box img{
-width:100%;
-height:100%;
-object-fit:cover;
-}
-
-@media(max-width:768px){
-
-nav{
-padding:10px;
-}
-
-.logo-box{
-width:45px;
-height:45px;
-}
-
-}
-
-.logo-box{
-width:42px;
-height:42px;
-}
-
-.hero{
-margin-top:0;
-padding:40px 20px;
-min-height:auto;
-text-align:center;
-}
-
-.hero-grid{
-grid-template-columns:1fr;
-gap:25px;
-}
-
-.hero h3{
-font-size:14px;
-}
-
-.hero-title{
-font-size:26px;
-line-height:1.2;
-}
-
-.hero p{
-font-size:15px;
-max-width:100%;
-}
-
-.hero img{
-max-width:240px;
+.question{
+    font-size:24px;
+    font-weight:600;
+    margin-bottom:30px;
 }
 
 .btn{
-padding:12px 24px;
-font-size:14px;
+    display:block;
+    width:100%;
+    padding:15px;
+    margin:10px 0;
+    font-size:18px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    transition:0.2s;
 }
 
-.stats-grid{
-grid-template-columns:1fr 1fr;
-gap:15px;
+.yes{
+    background:#FE2C55; /* TikTok pink/red */
+    color:#fff;
 }
 
-.counter{
-font-size:28px;
+.no{
+    background:#25F4EE; /* TikTok cyan */
+    color:#000;
 }
 
-.stat-item{
-padding:20px;
-}
-
-.section{
-padding:60px 20px;
-}
-
-.section-title{
-font-size:24px;
-}
-
-.gallery-container img{
-height:220px;
-}
-
-.testimonials{
-grid-template-columns:1fr;
-}
-
-.cards{
-grid-template-columns:1fr;
-}
-
-.achievement-image{
-height:200px;
-}
-  nav{
-display:flex;
-justify-content:center;
-align-items:center;
-flex-wrap:wrap;
-}
-
-.logo-link{
-justify-content:center;
-}
-
+.btn:hover{
+    transform:scale(1.05);
+    opacity:0.9;
 }
 </style>
-<link rel="me" href="https://www.blogger.com/profile/06236339533173646059" />
-<meta name='google-adsense-platform-account' content='ca-host-pub-1556223355139109'/>
-<meta name='google-adsense-platform-domain' content='blogspot.com'/>
 </head>
+
 <body>
 
-<nav>
-<div class="logo-link">
-<div class="logo-box">
-<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhDthKpEBnR9OZaWqZrGczVjG8Guwl_1vo9C5f9ll7QH4zKwXu5IYvQPJPFWLdHM7L0AND5QzZi8KXHAWXZwDctQgN4dZVX0MFtBR74q4G2C_Szum_dy9-A5lzX83bqRIEEEnu23ZXcRUmgbwivInMbPgWxoARHo9y4XSL-QgIw4rvLGDLxbQ936jyDGxzo/s640/WhatsApp%20Image%202026-06-13%20at%207.52.20%20AM.jpeg">
-</div>
+<div class="container">
+    <div class="logo">Please Answer this Simple Questions</div>
+    <div class="question">Are you from Kenya?</div>
 
-<div class="logo-box">
-<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEioqUONWjVO9E-yE3E5549MJWkGTpux9NYrTux1YimQC4sRfQ-nBfub5osUtOworkrvPpsCDeFqiAQNpdE6vpmaRfsDGBZ5U5aKs16WqtcAL_kvLeLJWjE7FOw5zJJI3Cf0KgktHw3NCf9oG4sBxTdqJnnQQtKSqHKRRd9Fu6i50cD060JZ88wJ_bFwu59b/s1254/ChatGPT%20Image%20Jun%2013,%202026,%2009_40_16%20AM.png">
+    <button class="btn yes" onclick="goLink()">Yes</button>
+    <button class="btn no" onclick="goLink()">No</button>
 </div>
-
-<div class="logo-box">
-<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhaYjdvY1lU5tDOt5iDnijmN8Mf8Gc2Sw6G2f4nLPPy8b7RdyAOMWKsYQOGVd7PtWpkl-E7nkShODNnr3SJCHrbX-7b-ZXtwHh0TIUYBLFVIdvBl3w9m6A_CYmeMTiB-t_1CNVLnLc6ertigfc2MkqIqbcfLeGYLkaZLPoliu8-wIHemaNxJIJIfg7JCU3l/s1254/ChatGPT%20Image%20Jun%2013,%202026,%2009_46_41%20AM.png">
-</div>
-</div>
-</nav>
-<section class="hero">
-<div class="hero-grid">
-<div>
-<h3>NSIT UBIOM LOCAL GOVERNMENT PORTAL 2026</h3>
-<h1 class="hero-title">NSIT UBIOM LOCAL GOVERNMENT BURSARY 2026</h1>
-<p>Empowering students through educational support, innovation and community development.</p><br>
-<a href="https://nisit202.blogspot.com/" class="btn">APPLY NOW</a>
-</div>
-<div>
-<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj_Is_Kc9hxVi5AmfFJjdjGczZORZuuUmVdpoKpcO4ysOLXUyNpTBuzN1OFlJyivOgW9Dlt6vY5bnhCBUZkbIrGNq7fyouy7L5Nid4fQ5qWV3xmvFjA6_vsEwFrH05aFIP9jXZl5C-W65RvpVGWAJznpBBoVkJITA3Gnw_BY0AlJZuz4419PVLFsGMEobXB/s900/WhatsApp%20Image%202026-06-12%20at%206.55.01%20PM.jpeg" alt="Chairman">
-</div>
-</div>
-</section>
-
-<section class="section stats">
-<div class="stats-grid">
-<div class="stat-item"><div class="counter" data-target="5000">0</div><p>Students Applied</p></div>
-<div class="stat-item"><div class="counter" data-target="3000">0</div><p>Students Supported</p></div>
-<div class="stat-item"><div class="counter" data-target="8000">0</div><p>Portal Visitors</p></div>
-<div class="stat-item"><div class="counter" data-target="250">0</div><p>ICT Computers</p></div>
-</div>
-</section>
-
-<section id="achievements" class="section">
-<h2 class="section-title">Achievements</h2>
-<div class="cards">
-<div class="achievement-card"><img class="achievement-image" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg7yTXC-bgygPftKtehNhoQZuWZHc0bfxqvu-2FKlJOBY0akWZtz_RP1WAAVQyaK74xGCXnPGW9BpJpQ-Sl-yOpEJ6g7VwXirNgN8qnLBsMx84gsHExGN1mq6LozI0sVSo5GuO2Ei_4-U_BMTX3Bij26U8OQqm8MYesZO3Rw6sJYdKWQe-IYBHJcEvHJLcR/s1280/WhatsApp%20Image%202026-06-12%20at%206.56.00%20PM%20(1).jpeg"><div class="achievement-content">Educational grants to students.</div></div>
-<div class="achievement-card"><img class="achievement-image" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhYi86XWIg7mpxE4T7D2pMiyk03FTdmw_KkR1M-xvXr9muAQrkF5PLDvlDkvBHHv4VJ8i8Iy3rwHZYvZlXEf4iF-l1y6RVi5CKU2Etyyi0dCJnlpuWnPc4i8OFhnGp3lu4IaTRsf7hncfRl8nJNwvo3gtT4z2ah6R2tdYl_jyCas6vPTccbDwqwyu4_T7Lm/s1080/WhatsApp%20Image%202026-06-12%20at%206.57.30%20PM%20(1).jpeg"><div class="achievement-content">Purchase of JAMB forms.</div></div>
-  <div class="achievement-card">
-<img class="achievement-image" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj9Qa4zlQYJUekE7CQM2W6erGweE2lMoMdWK8czpkgW_Cd7kUIUhkrnL9c-h9DUrxZjO-9FxkqIcvBXrz3L7XJjkH0rupsUHKZ2QKyEpErUUwQUkWZxu3sk-kILc8UCLqg1CCZiSufQHJRpeiJWahXdQSi3VNY3can_6NgfxN8PJ6QjKRLdJxXJrimy7ffr/s720/WhatsApp%20Image%202026-06-12%20at%206.55.59%20PM%20(1).jpeg">
-<div class="achievement-content">
-ICT Centre with 250 computers.
-</div>
-</div>
-
-<div class="achievement-card">
-<img class="achievement-image" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiJtEPjhfW5nkk_Jy8i3lVovU76t-itL7WW8UNaZWBeG7Ws9TM5pUe1VCF-M6HcwjzVfa1BUtMDcEY3o_yYo0B08g0aQSDc_eXQkIlWK4J9cBkmTk_K98RWN3N7QNYMhA0ve98HnoSjN52mWq0hWI6pS8JHjZ69ymFOfV4K77BxsxdsS2p6wEv5jnjonUFm/s1280/WhatsApp%20Image%202026-06-12%20at%208.24.40%20PM.jpeg">
-<div class="achievement-content">
-Construction of Urua Ntakrok model market comprising 3 blocks of lock up stores that are made up of 36 stores, 27 open partitioned stalls housing 378 stalls, 6 blocks of open shades, toilets, generator house, Abbattior, water tank & market offices.
-</div>
-</div>
-
-<div class="achievement-card">
-<img class="achievement-image" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi5S5B__lW2XKF6l3nM0VGtV9MFcH2LepaEyHw7NKg_qthvDhERxOC5NCd2BAgGEjPgCEGOPlktUuknOR6jQrd6VvwYL-C6EoMNSbTrz6XuHYtw4tivD6tEOAIrvXE0r58YRyLZPrVDPOZ2Xw0GaE0dGQE1Yzqwu39tFHAbANn3u9o5ZORxqvJ2p1ti56K7/s720/WhatsApp%20Image%202026-06-12%20at%207.02.49%20PM.jpeg">
-<div class="achievement-content">
-Free medical outreach programs.
-</div>
-</div>
-
-<div class="achievement-card">
-<img class="achievement-image" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiBhoKzRBlmcun9encc9jSmmLgvViHSCgx19iY0g3bvTghtMpE9sqffnzPUDoWzBvecMH02NF-piNSApPmG2Poou8cLUYXK-XXv5d1c2JesgxJPoSfqZ4MpEEy5IGtXaQycIWqHX032GRHNcLOUej60p0JlvfvNTf8Np0fjH8kbB_VAJMvml9wEdIgI6YaD/s1032/WhatsApp%20Image%202026-06-12%20at%207.01.28%20PM.jpeg"><div class="achievement-content">
-<div class="achievement-content">
-Distribution of Educational Materials to 38 primary schools.
-</div>
-</div>
-  
-<section id="gallery" class="section">
-<h2 class="section-title">Project Gallery</h2>
-
-<div class="gallery-slider">
-
-<div class="gallery-container">
-
-<div class="gallery-slide">
-<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhX-Vrp5jJST7Hijo5RayiHyPQHj7LtrTCkOzWxmCf87Pomm73kczVsLJoyMMmQ18vgDA0A1BQ2ewywcV9BF8jloMaXCUJPSzBV5bVi2k2HJIEAnAsolPcVIECGAyEVfV0oX9SIAyuKWjBfdyQRN0JULq84WG8ie3abFR5s8oTc0SVxUq0H6zAfYq4LQNEq/s980/WhatsApp%20Image%202026-06-12%20at%206.56.43%20PM%20(2).jpeg">
-</div>
-
-<div class="gallery-slide">
-<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjaJm3hTeIUJfU-lO6XktnI5VUTrQc9YNvrNOkFaBuCg8ue5zxg_AolxzG3CaGhfoj6aDjM0QNkMnUBw2pJ3Woj1R9T3L34ML9DUtlXjjF9e-mPfbBH48tcD159vwtDUd7eBwOio03EsP2RHGPxOXP2kV2t5e8Q-Uk4A6YAmfOyZR5InZr1tc9oq0tMH9YD/s1032/WhatsApp%20Image%202026-06-12%20at%206.56.43%20PM.jpeg">
-</div>
-
-<div class="gallery-slide">
-<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg_oAHYwFcJlqySN0EsAzxXZXYq6B3vGu5QWzJ-JHNTM_Z3tXRRK7iQtWjqIC1DOI_mNDgh4z9z-a_EjbKBfPq8791BvoffAL-Oqf0EAHoeblb58tAUWwMNYF3f2GHWzltWQGRv6n3xv5rOL0HjGKVe10y3U7fKNTEJUnzZPKJW4WPnd6x0eC6p2PLKokJl/s1032/WhatsApp%20Image%202026-06-12%20at%206.56.43%20PM%20(1).jpeg">
-</div>
-
-  <div class="gallery-slide">
-<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhmQ8fxfIz5aE-5rfo6P-ACgAWC3nKsO41R1GuYEONrask4xY4lHH8-oRwAtb0vqtLtjiGCFBfa6Lv8JowiVxiCaQbcZ0LNpZA5I8BWkm0XXOLQ1-A5EaW6r2z62Mx2VR9R6BcnruT7d68S5Z7MY9_Q5sgmHzhrGk6LdjSJ9rrklWssxPjLPFRe1u3mdsSv/s1016/WhatsApp%20Image%202026-06-12%20at%207.02.04%20PM.jpeg">
-</div>
-  
-</div>
-
-</div>
-
-<div class="gallery-controls">
-<span class="gallery-dot active" data-index="0"></span>
-<span class="gallery-dot" data-index="1"></span>
-<span class="gallery-dot" data-index="2"></span>
-</div>
-
-</section>
-
-<section id="testimonials" class="section">
-<h2 class="section-title">Testimonials</h2>
-<div class="testimonials">
-<div class="testimonial">The bursary programme has helped many students.</div>
-<div class="testimonial">The ICT centre improved digital learning.</div>
-<div class="testimonial">Community projects have impacted residents positively.</div>
-</div>
-</section>
-
-<section class="section cta">
-<h2>2026 Bursary Programme is Ongoing</h2>
-<p>Apply now and complete your application.</p><br>
-<a href="https://nisit202.blogspot.com/" class="btn">PROCEED TO APPLICATION FORM</a>
-</section>
-
-<footer>
-<p>NSIT UBIOM LOCAL GOVERNMENT PORTAL 2026</p>
-</footer>
 
 <script>
-
-// COUNTERS
-document.querySelectorAll('.counter').forEach(counter=>{
-const target=+counter.dataset.target;
-let count=0;
-const step=Math.ceil(target/100);
-
-const timer=setInterval(()=>{
-count+=step;
-
-if(count>=target){
-count=target;
-clearInterval(timer);
+function goLink(){
+    window.location.href = "https://1buv.com/link?z=11011721&var={SOURCE_ID}&ymid={CLICK_ID}";
 }
-
-counter.textContent=count.toLocaleString()+"+";
-},20);
-});
-
-
-// GALLERY SLIDER
-const galleryContainer=document.querySelector('.gallery-container');
-const dots=document.querySelectorAll('.gallery-dot');
-
-let currentSlide=0;
-const totalSlides =
-document.querySelectorAll('.gallery-slide').length;
-
-function showSlide(index){
-
-galleryContainer.style.transform=
-`translateX(-${index*100}%)`;
-
-dots.forEach(dot=>dot.classList.remove('active'));
-dots[index].classList.add('active');
-
-currentSlide=index;
-}
-
-dots.forEach(dot=>{
-dot.addEventListener('click',()=>{
-showSlide(Number(dot.dataset.index));
-});
-});
-
-setInterval(()=>{
-currentSlide++;
-
-if(currentSlide>=totalSlides){
-currentSlide=0;
-}
-
-showSlide(currentSlide);
-
-},4000);
-
 </script>
 
 </body>
